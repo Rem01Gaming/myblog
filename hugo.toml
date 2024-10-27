@@ -4,7 +4,6 @@ defaultContentLanguage = "en"
 hasCJKLanguage = true
 title = 'Rem01.Chat()'
 copyright = 'Rem01Gaming'
-theme = 'itheme'
 paginate = 5
 [params]
   defaultCover = 'https://www.apple.com.cn/newsroom/images/apple-logo_black.jpg.landing-regular_2x.jpg'
