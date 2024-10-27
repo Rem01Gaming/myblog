@@ -1,0 +1,29 @@
+baseURL = 'https://blog.rem01gaming.dev/'
+languageCode = 'en'
+defaultContentLanguage = "en"
+hasCJKLanguage = true
+title = 'Rem01.Chat()'
+copyright = 'Rem01Gaming'
+theme = 'itheme'
+paginate = 5
+[params]
+  defaultCover = 'https://www.apple.com.cn/newsroom/images/apple-logo_black.jpg.landing-regular_2x.jpg'
+  email = 'Rem01_Gaming@proton.me'
+  ShowCopyRight = true
+  ShowMore = true
+  ShowRSS = false
+  [[params.socialMedia]]
+    name = 'Github'
+    url = 'https://github.com/Rem01Gaming'
+  [[params.socialMedia]]
+    name = 'Telegram'
+    url = 'https://rem01schannel.t.me/'
+  [[params.socialMedia]]
+    name = 'Youtube'
+    url = 'https://youtube.com/@rem01gaming?si=Slr7L7UXqusUmg--'
+  [[params.socialMedia]]
+    name = 'TikTok'
+    url = 'https://www.tiktok.com/@Rem01Gaming'
+  [[params.blogroll]]
+    name = 'rem01gaming.dev'
+    url = 'https://rem01gaming.dev/'
