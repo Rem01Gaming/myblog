@@ -5,17 +5,20 @@
 <link rel="icon" type="image/webp" href="/android-chrome.webp" sizes="192x192" />
 <link rel="apple-touch-icon" type="image/webp" href="/apple-touch-icon.webp" sizes="180x180" />
 <meta name="keyword" content="{{ .Site.Params.keyword }}">
-
-<title>{{ .Title | default .Site.Title }}</title>
 <meta name="description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}">
 <meta name="keywords" content="{{ (delimit .Keywords ", ") | default .Site.Params.keywords }}">
 <meta property="og:description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}" />
 <meta property="og:site_name" content="{{ .Title | default .Site.Title }}" />
 <meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="{{ .Title | default .Site.Title }}" />
 <meta name="author" content="{{ .Site.Author.name | default .Page.Params.Author }}">
 <meta property="og:locale" content="{{ $.Site.LanguageCode | default "en" }}">
+<title>{{ .Title | default .Site.Title }}</title>
+
+<meta property="og:image" content="{{ with .Params.cover }}{{ . | absURL }}{{ else }}{{ "images/default-og-image.webp" | absURL }}{{ end }}">
+<meta property="twitter:image" content="{{ with .Params.cover }}{{ . | absURL }}{{ else }}{{ "images/default-og-image.webp" | absURL }}{{ end }}">
 
 {{- if .Page.Params.Excerpt }}
 <meta name="description"

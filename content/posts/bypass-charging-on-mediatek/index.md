@@ -1,54 +1,51 @@
 ---
-title: "How To Enable Bypass Charging On Any MediaTek Devices"
-description: ""
+title: "How to Enable Bypass Charging on MediaTek Devices: A Comprehensive Guide"
+description: "Learn how to enable bypass charging on MediaTek devices to extend battery lifespan, reduce heat, and boost performance, especially during gaming."
 date: 2024-10-26T14:55:20+07:00
-tags: ["Android","MediaTek","Linux","kernel","Bypass Charging"]
+tags: ["Android", "MediaTek", "Linux", "Kernel", "Bypass Charging", "Battery", "Smartphone"]
 cover: '/posts/bypass-charging-on-mediatek/ogp.jpg'
 author: Rem01Gaming
 draft: false
 ---
 
-![Source: The Daily Messenger](/posts/bypass-charging-on-mediatek/ogp.jpg)
+![Bypass Charging for MediaTek Devices](/posts/bypass-charging-on-mediatek/ogp.jpg)
 
-Batteries in smartphones are engineered to endure a specific number of charge-discharge cycles. As you use your phone more frequently, it drains faster, requiring more frequent charging. This continuous cycle gradually deteriorates the battery's chemical composition, impairing performance and significantly reducing its capacity to hold a charge.
+Smartphone batteries endure specific charge-discharge cycles. With increased usage, these cycles become more frequent, gradually wearing down the battery's chemical integrity and impacting its performance. This is especially concerning for high-performance and gaming smartphones, where overheating can accelerate this degradation. **Bypass charging** is a solution designed to mitigate battery wear, extend lifespan, and improve performance.
 
-This issue becomes more pronounced in gaming smartphones, which often run hot during extended use. Bypass charging is one of several strategies employed by manufacturers to mitigate battery wear in smartphones and laptops.
+## What is Bypass Charging?
 
-## What is bypass charging?
+In standard charging, your smartphone uses the battery even when plugged in, while simultaneously charging it. **Bypass charging** differs by allowing the device to receive power directly from the charger, effectively bypassing the battery. This technique, used in some gaming devices and high-performance laptops, helps reduce wear and heat.
 
-Typically, your phone draws power from the battery while charging it through an charger. However, bypass charging, utilized in high-performance laptops and some gaming phones like the Asus ROG, allows the device to receive power directly from the charger instead of the battery. This mode effectively bypasses the battery, hence the name.
+## Benefits of Bypass Charging
 
-## Benefits of bypass charging
+1. **Extended Battery Lifespan:** By avoiding constant charging and discharging, bypass charging reduces the stress on the battery, helping it retain capacity longer.
+2. **Lower Heat Generation:** Bypass charging avoids the combined heat of charging and intense usage, reducing strain on the battery.
+3. **Enhanced Performance:** With less heat, devices are less likely to throttle during resource-heavy activities, providing a smoother user experience, especially during gaming.
 
-1. **Reduced Battery Wear:** Since the battery isn't constantly charging and discharging, its lifespan can be extended.
-2. **Reduced Heat:** Intense tasks generate heat, and this combined with charging can strain the battery. Bypass charging helps avoid this.
-3. **Improved Performance:** Bypassing the battery reduces the likelihood of thermal throttling, especially during heavy tasks like gaming or prolonged use.
-
-## How to enable bypass charging on MediaTek devices
-**Most MediaTek devices support bypass charging**, as MediaTek provides a procfs interface, `mtk_battery_cmd`, which allows control over current limits and the bypass charging feature. You can easily toggle the bypass charging feature on and off with simple commands.
-
-> **Note**: Root access is required to execute these commands.
+## How to Enable Bypass Charging on MediaTek Devices
+Many **MediaTek devices** support bypass charging via the `mtk_battery_cmd` procfs interface. This allows control over current limits and bypass charging with a few simple commands. **Note:** Root access is required.
 
 ```shell
 # Enable bypass charging
-# Charging current will show 10mA on reading or lower if bypass charging working
-echo "0 1" >/proc/mtk_battery_cmd/current_cmd
+# Charging current will read 10mA or lower, indicating bypass charging is active.
+echo "0 1" > /proc/mtk_battery_cmd/current_cmd
 
 # Disable bypass charging
-# Charging current will back to normal
-echo "0 0" >/proc/mtk_battery_cmd/current_cmd
+# Charging current returns to normal.
+echo "0 0" > /proc/mtk_battery_cmd/current_cmd
 ```
 
-There are some other software like [Advanced Charging Controller](https://github.com/VR-25/acc) and [Origami Kernel Manager](https://github.com/Rem01Gaming/origami_kernel_manager) that can do bypass charging in MediaTek devices as well as other devices.
+Other tools, like [Advanced Charging Controller (ACC)](https://github.com/VR-25/acc) and [Origami Kernel Manager](https://github.com/Rem01Gaming/origami_kernel_manager), also support bypass charging on MediaTek and other devices.
 
-## There's some consideration if you want to try bypass charging
+## Important Considerations for Bypass Charging
 
-1. **You must use original charger or equivalent**
-	> Typically, non-original charger gives lower amount off current that original charger gives, **lower current can result slight battery drain because system tries to compensate current deficit from charger.**
-2. **Not all devices support bypass charging**
-	> Bypass charging not only requires support on software, but also hardware. expect bypass charging to not work on some devices.
+1. Use an Original or Equivalent Charger
+Non-original chargers typically deliver less current. Low current may cause slight battery drain if the system compensates for current deficit from the charger.
+
+2. Not All Devices Are Compatible
+Bypass charging requires both software and hardware support. Some devices may not fully support bypass charging, even if enabled.
 
 ## References
-https://github.com/VR-25/acc
-https://github.com/Rem01Gaming/origami_kernel_manager
-https://www.howtogeek.com/what-is-bypass-charging-and-why-you-want-it/
+[Advanced Charging Controller (ACC)](https://github.com/VR-25/acc)
+[Origami Kernel Manager](https://github.com/Rem01Gaming/origami_kernel_manager)
+[How-To Geek on Bypass Charging](https://www.howtogeek.com/what-is-bypass-charging-and-why-you-want-it/)
