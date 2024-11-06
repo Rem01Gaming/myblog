@@ -39,13 +39,15 @@ Other tools, like [Advanced Charging Controller (ACC)](https://github.com/VR-25/
 
 ## Important Considerations for Bypass Charging
 
-1. Use an Original or Equivalent Charger
-Non-original chargers typically deliver less current. Low current may cause slight battery drain if the system compensates for current deficit from the charger.
+1. **Use an Original or Equivalent Charger**
+> Non-original chargers typically deliver less current. Low current may cause slight battery drain if the system compensates for current deficit from the charger.
 
-2. Not All Devices Are Compatible
-Bypass charging requires both software and hardware support. Some devices may not fully support bypass charging, even if enabled.
+2. **Not All Devices Are Compatible**
+> Bypass charging requires both software and hardware support. Some devices may not fully support bypass charging, even if enabled.
 
 ## References
 [Advanced Charging Controller (ACC)](https://github.com/VR-25/acc)
+
 [Origami Kernel Manager](https://github.com/Rem01Gaming/origami_kernel_manager)
+
 [How-To Geek on Bypass Charging](https://www.howtogeek.com/what-is-bypass-charging-and-why-you-want-it/)
