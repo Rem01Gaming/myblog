@@ -1,5 +1,5 @@
 ---
-title: "How to Enable Bypass Charging on MediaTek Devices: A Comprehensive Guide"
+title: "How to Enable Bypass Charging on MediaTek Devices"
 description: "Learn how to enable bypass charging on MediaTek devices to extend battery lifespan, reduce heat, and boost performance, especially during gaming."
 date: 2024-10-26T14:55:20+07:00
 tags: ["Android", "MediaTek", "Linux", "Kernel", "Bypass Charging", "Battery", "Smartphone"]
